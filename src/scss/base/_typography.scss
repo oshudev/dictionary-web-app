@@ -1,0 +1,59 @@
+@use '../utils' as *;
+
+:root {
+  --font-search-text: #{$font-size-300};
+  --font-dropdown-text: #{$font-size-100};
+  --font-heading-l: #{$font-size-700};
+  --font-heading-m: #{$font-size-400};
+  --font-heading-s: #{$font-size-300};
+  --font-body-m: #{$font-size-200};
+  --font-body-s: #{$font-size-100};
+}
+
+@include mq(sm) {
+  :root {
+    --font-search-text: #{$font-size-500};
+    --font-dropdown-text: #{$font-size-400};
+    --font-heading-l: #{$font-size-800};
+    --font-heading-m: #{$font-size-600};
+    --font-heading-s: #{$font-size-500};
+    --font-body-m: #{$font-size-400};
+    --font-body-s: #{$font-size-100};
+  }
+}
+
+h1 {
+  font-size: var(--font-heading-l);
+}
+
+h2 {
+  font-size: var(--font-heading-m);
+}
+
+h3 {
+  font-size: var(--font-heading-s);
+}
+
+p {
+  font-size: var(--font-body-m);
+  @include line-height(24);
+}
+
+.text-sm {
+  font-size: var(--font-body-s);
+  @include line-height(17);
+}
+
+@include mq(sm) {
+  h1 {
+    @include line-height(77);
+  }
+
+  h2 {
+    @include line-height(29);
+  }
+
+  h3 {
+    @include line-height(24);
+  }
+}

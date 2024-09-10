@@ -24,3 +24,12 @@
 @mixin line-height($val) {
   line-height: calc($val / 16) + rem;
 }
+
+@mixin font-face($font-family, $font-weight, $path) {
+  @font-face {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight;
+    src: url($path) format(ttf);
+  }
+}
