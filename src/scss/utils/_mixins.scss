@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use "./breakpoints" as *;
+@use './breakpoints' as *;
 
 @mixin mq($width, $type: min) {
   @if not map.has-key($breakpoints, $width) {
@@ -22,5 +22,5 @@
 }
 
 @mixin line-height($val) {
-  line-height: calc($val / 16);
+  line-height: calc($val / 16) + rem;
 }
