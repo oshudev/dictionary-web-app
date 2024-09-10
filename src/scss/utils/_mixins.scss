@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use "./breakpoints" as *;
 
 @mixin mq($width, $type: min) {
   @if not map.has-key($breakpoints, $width) {
