@@ -1,0 +1,15 @@
+$font-family-sans-serif: 'Inter', sans-serif;
+$font-family-serif: 'Lora', serif;
+$font-family-monospace: 'Inconsolata', monospace;
+
+[data-font-theme='default'] {
+  --font-family-default: #{$font-family-sans-serif};
+}
+
+[data-font-theme='serif'] {
+  --font-family-default: #{$font-family-serif};
+}
+
+[data-font-theme='mono'] {
+  --font-family-default: #{$font-family-monospace};
+}
