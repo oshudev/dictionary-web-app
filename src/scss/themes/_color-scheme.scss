@@ -1,0 +1,57 @@
+@use 'sass:color';
+@use '../utils/colors' as *;
+
+:root {
+  --color-background-bullet: #{$color-primary-strong};
+  --color-background-toggle-handler: #{$color-neutral-100};
+  --color-background-toggle-hover: #{$color-primary-base};
+  --color-border-formfield-error: #{$color-secondary};
+  --color-text-accent: #{$color-primary-base};
+  --color-text-error: #{$color-secondary};
+  --color-text-hover: #{$color-primary-base};
+  --color-text-subtle: #{$color-neutral-400};
+  color-scheme: dark light;
+}
+
+@mixin light-theme {
+  --color-background-default: #{$color-neutral-100};
+  --color-background-search-bar: #{$color-neutral-200};
+  --color-background-toggle: #{$color-neutral-400};
+  --color-drop-shadow: 0 5px 30px 0 #{color.change(
+      $color-neutral-800,
+      $alpha: 0.1
+    )};
+  --color-horizontal-rule: #{$color-neutral-300};
+  --color-text-default: #{$color-neutral-600};
+}
+
+[data-color-theme='light'] {
+  @include light-theme;
+  color-scheme: only light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @include light-theme;
+  }
+}
+
+@mixin dark-theme {
+  --color-background-default: #{$color-neutral-800};
+  --color-background-search-bar: #{$color-neutral-700};
+  --color-background-toggle: #{$color-primary-base};
+  --color-drop-shadow: 0 5px 30px 0 #{$color-primary-base};
+  --color-horizontal-rule: #{$color-neutral-500};
+  --color-text-default: #{$color-neutral-100};
+}
+
+[data-color-theme='dark'] {
+  @include dark-theme;
+  color-scheme: only dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-theme;
+  }
+}
