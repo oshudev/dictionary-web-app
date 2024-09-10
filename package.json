@@ -1,8 +1,8 @@
 {
-  "name": "vanilla-webpack-template",
+  "name": "dictionary-web-app",
+  "private": true,
   "version": "1.0.0",
   "description": "",
-  "private": true,
   "scripts": {
     "build": "webpack --node-env production",
     "serve": "webpack serve --node-env development",
