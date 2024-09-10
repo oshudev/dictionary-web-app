@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+body {
+  font-family: var(--font-family-default);
+  color: var(--color-text-default);
+  background-color: var(--color-background-default);
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
