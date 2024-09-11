@@ -1,0 +1,24 @@
+@use '../utils' as *;
+
+.header {
+  justify-content: space-between;
+  padding-block: 1.5rem;
+
+  &,
+  &__controls,
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .vertical-divider {
+    margin-inline: 1.625rem;
+    width: 1px;
+    height: 1.5rem;
+    background-color: $color-neutral-300;
+  }
+
+  .theme-toggle {
+    gap: 1.25rem;
+  }
+}

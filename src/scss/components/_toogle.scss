@@ -1,0 +1,39 @@
+.toggle {
+  padding: 3px;
+  width: 2.5rem;
+  height: 1.25rem;
+  background-color: var(--color-background-toggle);
+  border: none;
+  border-radius: 99rem;
+  transition: background-color 300ms ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-background-toggle-hover);
+  }
+
+  &.active + svg path {
+    stroke: var(--color-stroke-accent);
+  }
+
+  &.active &__handler {
+    left: calc(100% - var(--dim));
+  }
+
+  &__handler {
+    --dim: 0.875rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: var(--dim);
+    height: var(--dim);
+    background-color: var(--color-background-toggle-handler);
+    border-radius: 50%;
+    transition: left 300ms ease;
+  }
+
+  svg path {
+    transition: stroke 300ms ease;
+  }
+}

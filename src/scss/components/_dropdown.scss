@@ -1,0 +1,12 @@
+.dropdown {
+    &__trigger {
+        display: flex;
+        padding: 0;
+        gap: 1.125rem;
+        font-weight: 700;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
