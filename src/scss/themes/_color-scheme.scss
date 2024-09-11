@@ -43,6 +43,7 @@
   --color-drop-shadow: 0 5px 30px 0 #{$color-primary-base};
   --color-horizontal-rule: #{$color-neutral-500};
   --color-text-default: #{$color-neutral-100};
+  --color-stroke-accent: #{$color-primary-base};
 }
 
 [data-color-theme='dark'] {
